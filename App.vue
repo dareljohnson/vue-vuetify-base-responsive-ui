@@ -1,10 +1,11 @@
 <template>
     <div id="app">
-        <v-app id="inspire" dark>
-            <Navbar></Navbar>
+        <v-app dark>
+            <v-navigation-drawer app></v-navigation-drawer>
+            <v-toolbar app fixed></v-toolbar>
             <v-content>
                 <v-container fluid fill-height>
-                    <v-layout justify-center align-center>
+                    <v-layout>
                         <router-view></router-view>
                     </v-layout>
                 </v-container>
@@ -16,12 +17,12 @@
     </div>
 </template>
 <script>
-import Navbar from "../components/layout/Navbar";
+// imports go here
 
 export default {
     name: "app",
     components: {
-        Navbar
+    
     }
 };
 </script>
