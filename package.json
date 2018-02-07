@@ -1,1 +1,16 @@
 
+{
+  "name": "devmeetup",
+  "version": "1.0.0",
+  "description": null,
+  "keywords": [],
+  "homepage": "",
+  "main": "index.js",
+  "dependencies": {
+    "vuex": "3.0.1",
+    "vuetify": "0.17.7",
+    "vue-router": "3.0.1",
+    "vue": "2.5.13",
+    "stylus": "0.54.5"
+  }
+}
