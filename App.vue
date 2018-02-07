@@ -5,16 +5,16 @@
                            v-model="sideNav"
                            class="grey lighten-3">
            <v-list>
-              <v-list-tile>
+              <v-list-tile v-for="item in menuItems" :key="item.title">
                  <v-list-tile-action>
-                    <v-icon>supervisor_account</v-icon>
+                    <v-icon>{{ item.icon }}</v-icon>
                  </v-list-tile-action>
-                 <v-list-tile-content>View Meetups</v-list-tile-content>
+                 <v-list-tile-content>{{ item.title }}</v-list-tile-content>
               </v-list-tile>
            </v-list>                
       </v-navigation-drawer>
       <!-- Toolbar -->
-      <v-toolbar app fixed dark class="primary">
+      <v-toolbar app fixed dark class="primary toolbar">
       <v-toolbar-side-icon 
         v-on:click.stop="sideNav = !sideNav"
         class="hidden-sm-and-up">
@@ -22,7 +22,9 @@
       <v-toolbar-title>DevMeetup</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
-        <v-btn flat><v-icon left>supervisor_account</v-icon>View Meetups</v-btn>
+        <v-btn flat v-for="item in menuItems" :key="item.title">
+          <v-icon left>{{ item.icon }}</v-icon>{{ item.title }}
+        </v-btn>
       </v-toolbar-items>
       </v-toolbar>
       <!-- Main Content -->
@@ -62,7 +64,10 @@ export default {
 <style>
 .topleft {
     position: absolute;
-    top: 8px;
-    left: 16px;
+    top: 0px;
+    left: 10px;
+}
+.toolbar {
+  padding-bottom: 2px;
 }
 </style>
