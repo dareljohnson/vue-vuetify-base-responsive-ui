@@ -31,4 +31,4 @@ setTimeout(function () {
     template: '<App/>',
     components: { App }
   })
-}, 500);
+}, 50);

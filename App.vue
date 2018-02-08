@@ -29,7 +29,7 @@
       </v-toolbar>
       <!-- Main Content -->
       <v-content>
-          <v-container fluid>
+          <v-container fluid fill--height>
              <router-view class="topleft"></router-view>
           </v-container>
       </v-content>
@@ -70,4 +70,6 @@ export default {
 .toolbar {
   padding-bottom: 2px;
 }
+
+[v-cloak] {display: none}
 </style>
