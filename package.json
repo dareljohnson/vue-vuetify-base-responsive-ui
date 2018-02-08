@@ -1,9 +1,8 @@
-
 {
   "name": "devmeetup",
   "version": "1.0.0",
   "description": null,
-  "keywords": [],
+  "keywords": ["vuetify", "vue", "devmeetup"],
   "homepage": "",
   "main": "index.js",
   "dependencies": {
