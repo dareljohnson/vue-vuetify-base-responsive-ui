@@ -1,8 +1,9 @@
 {
   "name": "vue-vuetify-base-responsive-ui",
   "version": "1.0.0",
-  "description": null,
-  "keywords": ["vuetify", "vue", "responsive-ui","base"],
+  "description":
+    "Vue.js/Vuetify base starter project witth responsive ui design. You can also customize the Material Design theme colors and menu navigation links.",
+  "keywords": ["material design", "responsive", "vuetify", "menu", "vue"],
   "homepage": "https://6jok593qk.codesandbox.io",
   "main": "index.js",
   "dependencies": {
