@@ -3,18 +3,19 @@
       <!-- Hamburger menu -->
       <v-navigation-drawer app 
                            temporary
+                           enable-resize-watcher
                            fixed
                            v-cloak
                            v-model="sideNav"
                            class="grey lighten-3">
-           <v-list>
+           <v-list v-cloak>
               <v-list-tile 
                 v-for="item in menuItems" :key="item.title"
                 router :to="item.link">
-                 <v-list-tile-action>
+                 <v-list-tile-action v-cloak>
                     <v-icon>{{ item.icon }}</v-icon>
                  </v-list-tile-action>
-                 <v-list-tile-content>{{ item.title }}</v-list-tile-content>
+                 <v-list-tile-content v-cloak>{{ item.title }}</v-list-tile-content>
               </v-list-tile>
            </v-list>                
       </v-navigation-drawer>
@@ -24,11 +25,11 @@
         v-on:click.stop="sideNav = !sideNav"
         class="hidden-sm-and-up">
       </v-toolbar-side-icon>
-      <v-toolbar-title>
+      <v-toolbar-title v-cloak>
         <router-link to="/" tag="span" style="cursor: pointer">DevMeetup</router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-items class="hidden-xs-only">
+      <v-toolbar-items class="hidden-xs-only" v-cloak>
         <v-btn flat 
           v-for="item in menuItems" :key="item.title"
           router :to="item.link">
