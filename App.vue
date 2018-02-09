@@ -58,7 +58,6 @@ export default {
           sideNav: false,
           appTitle: 'HomePage',
           menuItems: [
-            { icon: 'clear', title: 'Close', link: '/'},
             { icon: 'supervisor_account', title: 'View Content', link: '/viewcontent'},
             { icon: 'room', title: 'Create Content', link: '/createcontent'},
             { icon: 'person', title: 'Profile', link: '/profile'},
