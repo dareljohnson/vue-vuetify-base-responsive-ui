@@ -20,7 +20,7 @@
            </v-list>                
       </v-navigation-drawer>
       <!-- Toolbar -->
-      <v-toolbar app fixed class=" toolbar" v-cloak>
+      <v-toolbar app fixed class="toolbar" v-cloak>
       <v-toolbar-side-icon 
         v-on:click.stop="sideNav = !sideNav"
         class="hidden-sm-and-up">
