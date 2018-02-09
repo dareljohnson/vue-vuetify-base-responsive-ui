@@ -1,7 +1,11 @@
 <template>
-  <div v-cloak>
-    <p>Home Page</p>
-  </div>
+  <v-container>
+    <v-layout row wrap>
+      <v-flex xs12 v-cloak>
+        <p>Home Page</p>
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
 
 <style>

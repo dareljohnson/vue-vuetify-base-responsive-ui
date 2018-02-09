@@ -4,6 +4,7 @@
       <v-navigation-drawer app 
                            temporary
                            fixed
+                           v-cloak
                            v-model="sideNav"
                            class="grey lighten-3">
            <v-list>
@@ -18,7 +19,7 @@
            </v-list>                
       </v-navigation-drawer>
       <!-- Toolbar -->
-      <v-toolbar app fixed dark class="primary toolbar">
+      <v-toolbar app fixed dark class="primary toolbar" v-cloak>
       <v-toolbar-side-icon 
         v-on:click.stop="sideNav = !sideNav"
         class="hidden-sm-and-up">
@@ -37,12 +38,12 @@
       </v-toolbar>
       <!-- Main Content -->
       <v-content>
-          <v-container fluid>
+          <v-container fluid v-cloak>
              <router-view></router-view>
           </v-container>
       </v-content>
       <!-- Footer -->
-      <v-footer app fixed>
+      <v-footer app fixed v-cloak>
           <span>&copy; 2018</span>
       </v-footer>
   </v-app>
