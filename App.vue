@@ -20,13 +20,13 @@
            </v-list>                
       </v-navigation-drawer>
       <!-- Toolbar -->
-      <v-toolbar app fixed dark class="primary toolbar" v-cloak>
+      <v-toolbar app fixed class=" toolbar" v-cloak>
       <v-toolbar-side-icon 
         v-on:click.stop="sideNav = !sideNav"
         class="hidden-sm-and-up">
       </v-toolbar-side-icon>
       <v-toolbar-title v-cloak>
-        <router-link to="/" tag="span" style="cursor: pointer">DevMeetup</router-link>
+        <router-link to="/" tag="span" style="cursor: pointer">{{ appTitle }}</router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only" v-cloak>
@@ -56,9 +56,10 @@ export default {
     data (){ 
       return {
           sideNav: false,
+          appTitle: 'HomePage',
           menuItems: [
-            { icon: 'supervisor_account', title: 'View Meetups', link: '/meetups'},
-            { icon: 'room', title: 'Organize Meetup', link: '/createmeetup'},
+            { icon: 'supervisor_account', title: 'View Content', link: '/viewcontent'},
+            { icon: 'room', title: 'Create Content', link: '/createcontent'},
             { icon: 'person', title: 'Profile', link: '/profile'},
             { icon: 'face', title: 'Sign up', link: '/signup'},
             { icon: 'lock_open', title: 'Sign in', link: '/signin'}

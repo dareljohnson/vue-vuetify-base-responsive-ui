@@ -2,7 +2,7 @@
   <v-container>
     <v-layout row wrap>
       <v-flex xs12 v-cloak>
-        <p>Create Meetup Page</p>
+        <p>Create Content Page</p>
       </v-flex>
     </v-layout>
   </v-container>
