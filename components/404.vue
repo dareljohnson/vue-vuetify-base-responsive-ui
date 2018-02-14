@@ -2,7 +2,8 @@
   <v-container>
     <v-layout row wrap>
       <v-flex xs12 v-cloak>
-        <p>Oops! 404 Error. Page not found</p>
+        <p>Error 404</p>
+        <p>We're truly sorry, but there is no such page.</p>
       </v-flex>
     </v-layout>
   </v-container>
