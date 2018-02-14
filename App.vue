@@ -8,7 +8,28 @@
                            v-cloak
                            v-model="sideNav"
                            class="grey lighten-3">
+           <v-list class="pa-1" v-if="loggedIn" v-cloak>
+              <v-list-tile avatar>
+                <v-list-tile-avatar>
+                  <img src="https://media.licdn.com/mpr/mpr/shrinknp_100_100/p/3/000/0e1/058/3a56394.jpg" >
+                </v-list-tile-avatar>
+                <v-list-tile-content>
+                  <v-list-tile-title>Darel Johnson</v-list-tile-title>
+                </v-list-tile-content>
+              </v-list-tile>
+           </v-list> 
+           <v-list v-else>   
+               <v-list-tile>
+                  <v-list-tile-action v-cloak>
+                    <v-icon>home</v-icon>
+                  </v-list-tile-action>
+                  <v-list-tile-content>
+                    <router-link to="/" tag="span" style="cursor: pointer">{{ appTitle }}</router-link>
+                  </v-list-tile-content>
+               </v-list-tile>
+           </v-list>           
            <v-list v-cloak>
+              <v-divider></v-divider>
               <v-list-tile 
                 v-for="item in menuItems" :key="item.title"
                 router :to="item.link">
@@ -56,6 +77,7 @@ export default {
     data (){ 
       return {
           sideNav: false,
+          loggedIn: true,
           appTitle: 'HomePage',
           menuItems: [
             { icon: 'supervisor_account', title: 'View Content', link: '/viewcontent'},
