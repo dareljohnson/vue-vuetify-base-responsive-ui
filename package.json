@@ -6,6 +6,11 @@
   "keywords": ["material design", "responsive", "vuetify", "menu", "vue"],
   "homepage": "https://6jok593qk.codesandbox.io",
   "main": "index.js",
+  "scripts":{
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "bundle": "webpack"
+  },
   "dependencies": {
     "vuex": "3.0.1",
     "vuetify": "0.17.7",
